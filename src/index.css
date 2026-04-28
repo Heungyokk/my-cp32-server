@@ -1,0 +1,76 @@
+:root {
+  --bg: #f4f0e6;
+  --text: #1a1a1a;
+  --primary: #e63946;
+  --secondary: #1d3557;
+  --border: #1a1a1a;
+  --shadow-color: #1a1a1a;
+  
+  --font-mono: 'Courier New', Courier, monospace;
+  --font-sans: system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--bg);
+  border-left: 2px solid var(--border);
+  border-right: 2px solid var(--border);
+}
+
+/* Neo-brutalism Utilities */
+.neo-box {
+  border: 3px solid var(--border);
+  background-color: #fff;
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  border-radius: 0; /* Hard corners for retro feel */
+  transition: all 0.2s ease;
+}
+
+/* Removed neo-box:active to prevent unwanted layout vibration when typing or clicking */
+
+.neo-button {
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 3px solid var(--border);
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  background-color: var(--primary);
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+}
+
+.neo-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+.neo-button.blue {
+  background-color: var(--secondary);
+}
+
+/* Scrollbar hiding for clean UI */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
